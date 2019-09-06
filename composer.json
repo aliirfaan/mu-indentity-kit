@@ -1,0 +1,21 @@
+{
+    "name": "aliirfaan/mu-identity-kit",
+    "description": "Package to work with Mauritius national identity card number",
+    "keywords": ["Mauritius", "national identity card", "nic"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "aliirfaan",
+            "email": "aliirfaan.freelance@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": ">=5.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aliirfaan\\IdentityKit\\": "src/"
+        }
+    }
+}
