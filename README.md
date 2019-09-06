@@ -29,3 +29,8 @@ $identityCardKit = new IdentityCardKit();
 $isValid = $identityCardKit->isValidNicNumber('N051186463883C'); // false
 $dob = $identityCardKit->getDobFromValidNicNumber('N051190465003B'); // 05-11-1990
 ```
+
+## About
+
+### Requirements
+- Version 1.x works with PHP 5.2.0 or above
