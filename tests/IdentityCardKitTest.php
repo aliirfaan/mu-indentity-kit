@@ -33,14 +33,6 @@ class IdentityCardKitTest extends TestCase
         );
     }
 
-    public function providerTestGetDobFromValidNicNumber()
-    {
-        return array(
-            array('N0411864630039', '04-11-1986'),
-            array('N0411064630039', '04-11-2006'),
-        );
-    }
-
     /**
      * @dataProvider providerTestIsValidNicNumberFormat
      */
@@ -60,17 +52,6 @@ class IdentityCardKitTest extends TestCase
         $identityCardKit = new IdentityCardKit();
 
         $result = $identityCardKit->isValidNicNumber($nicNumber);
-        $this->assertEquals($expectedResult, $result);
-    }
-
-    /**
-     * @dataProvider providerTestGetDobFromValidNicNumber
-     */
-    public function testGetDobFromValidNicNumber($nicNumber, $expectedResult, $format = 'd-m-Y')
-    {
-        $identityCardKit = new IdentityCardKit();
-
-        $result = $identityCardKit->getDobFromValidNicNumber($nicNumber);
         $this->assertEquals($expectedResult, $result);
     }
 }

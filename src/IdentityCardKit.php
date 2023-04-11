@@ -73,24 +73,4 @@ class IdentityCardKit
         
         return (strval($lastPiece) == strval($checkSum));
     }
-
-    /**
-     * Get date of birth from a valid NIC number in desired format
-     *
-     * Make sure we have a validated NIC number
-     *
-     * We extract the date of birth part from the NIC number to get a date in dmy format
-     * We then convert to desired format
-     *
-     * @param string $nicNumber Valid NIC number without any spaces
-     * @param string $format Valid PHP date/time format
-     * @return string date of birth in desired format
-     */
-    public function getDobFromValidNicNumber($nicNumber, $format = 'd-m-Y')
-    {
-        $dateFromNic = substr($nicNumber, 1, 6);
-    
-        $dateTime = \DateTime::createFromFormat('dmy', $dateFromNic);
-        return $dateTime->format($format);
-    }
 }
