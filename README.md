@@ -3,7 +3,6 @@ PHP library for validating national indentity card (NIC) number.
 
 ## Features
 - Validate NIC number using regex and checksum
-- Get date of birth from NIC number in desired format
 
 ## Installation
 
@@ -27,7 +26,6 @@ $identityCardKit = new IdentityCardKit();
 
 // use
 $isValid = $identityCardKit->isValidNicNumber('N051186463883C'); // false
-$dob = $identityCardKit->getDobFromValidNicNumber('N051190465003B'); // 05-11-1990
 ```
 
 ## About
