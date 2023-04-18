@@ -48,29 +48,27 @@ class IdentityCardKit
     public function isValidNicNumber($nicNumber)
     {
         $nicNumber = strtoupper($nicNumber);
-
-        $nicPieces = str_split($nicNumber);
-        $lastPiece = array_pop($nicPieces);
+        $lastPiece = substr($nicNumber, -1);
         $checkSum = '#';
 
         $total = 0;
         for ($i=0, $j=14; $i<13; $i++, $j--) {
             if ($i == 0) {
-                $total = $total + ((ord($nicPieces[$i]) - 55) * $j);
+                $total += ((ord($nicNumber[$i]) - 55) * $j);
             } else {
-                $total = $total + ($nicPieces[$i] * $j);
+                $total += intval($nicNumber[$i]) * $j;
             }
         }
         
         $difference = 17 - ($total % 17);
         if ($difference == 17) {
-            $checkSum = 0;
+            $checkSum = '0';
         } elseif ($difference > 0 && $difference < 10) {
-            $checkSum = $difference;
+            $checkSum = (string) $difference;
         } else {
             $checkSum = chr($difference + 55); // convert to alpha character
         }
         
-        return (strval($lastPiece) == strval($checkSum));
+        return $lastPiece === $checkSum;
     }
 }
