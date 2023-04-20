@@ -71,4 +71,17 @@ class IdentityCardKit
         
         return $lastPiece === $checkSum;
     }
+    
+    /**
+     * Masks a valid NIC number for security purposes, for example in logging scenarios
+     *
+     * @param string $nicNumber NIC number without any spaces
+     * @param string $maskCharacter Character to use for masking
+     *
+     * @return void
+     */
+    public function maskNicNumber($nicNumber, $maskCharacter = '*')
+    {  
+        return substr($nicNumber, 0, 5) . str_repeat($maskCharacter, 7) . substr($nicNumber, -2);
+    }
 }
