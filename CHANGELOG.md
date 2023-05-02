@@ -3,6 +3,28 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com) and this project adheres to [Semantic Versioning](https://semver.org).
 
+## 2.0.4 - 2023-05-02
+
+### Added
+
+- Nothing
+
+### Changed
+
+- Test cases as it included sensitive information
+
+### Deprecated
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
 ## 2.0.3 - 2023-04-20
 
 ### Added

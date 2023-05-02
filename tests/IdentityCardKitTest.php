@@ -29,7 +29,7 @@ class IdentityCardKitTest extends TestCase
     {
         return array(
             array('N0411864630039', false),
-            array('N031186463003B', true),
+            array('V061190464003B', false),
         );
     }
 
