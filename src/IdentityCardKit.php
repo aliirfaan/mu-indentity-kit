@@ -78,10 +78,10 @@ class IdentityCardKit
      * @param string $nicNumber NIC number without any spaces
      * @param string $maskCharacter Character to use for masking
      *
-     * @return void
+     * @return string
      */
     public function maskNicNumber($nicNumber, $maskCharacter = '*')
-    {  
-        return substr($nicNumber, 0, 5) . str_repeat($maskCharacter, 7) . substr($nicNumber, -2);
+    {
+        return str_repeat($maskCharacter, 7) . substr($nicNumber, -7);
     }
 }

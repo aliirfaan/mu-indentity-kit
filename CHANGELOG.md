@@ -112,3 +112,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com) and this p
 ### Fixed
 
 - Nothing
+
+## 3.0.0 - 2024-02-29
+
+### Added
+
+- Nothing
+
+### Changed
+
+- maskNicNumber() - better masking of PII
+
+### Deprecated
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
